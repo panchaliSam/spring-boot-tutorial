@@ -1,6 +1,6 @@
 package org.example.springboot.controller;
 
-import org.example.springboot.entity.SoftwareEngineer;
+import org.example.springboot.dto.SoftwareEngineerDto;
 import org.example.springboot.service.SoftwareEngineerService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +19,7 @@ public class SoftwareEngineerController {
     }
 
     @GetMapping
-    public List<SoftwareEngineer> getSoftwareEngineers() {
+    public List<SoftwareEngineerDto> getSoftwareEngineers() {
         return softwareEngineerService.getAllSoftwareEngineers();
     }
 

@@ -1,11 +1,12 @@
 package org.example.springboot.service.Impl;
 
-import org.example.springboot.entity.SoftwareEngineer;
+import org.example.springboot.dto.SoftwareEngineerDto;
 import org.example.springboot.repository.SoftwareEngineerRepository;
 import org.example.springboot.service.SoftwareEngineerService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class SoftwareEngineerServiceImpl implements SoftwareEngineerService {
@@ -17,7 +18,9 @@ public class SoftwareEngineerServiceImpl implements SoftwareEngineerService {
     }
 
     @Override
-    public List<SoftwareEngineer> getAllSoftwareEngineers() {
-        return softwareEngineerRepository.findAll();
+    public List<SoftwareEngineerDto> getAllSoftwareEngineers() {
+        return softwareEngineerRepository.findAll().stream()
+                .map(SoftwareEngineerDto::fromEntity)
+                .collect(Collectors.toList());
     }
 }

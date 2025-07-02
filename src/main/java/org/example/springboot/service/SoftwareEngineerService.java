@@ -1,9 +1,9 @@
 package org.example.springboot.service;
 
-import org.example.springboot.entity.SoftwareEngineer;
+import org.example.springboot.dto.SoftwareEngineerDto;
 
 import java.util.List;
 
 public interface SoftwareEngineerService {
-    List<SoftwareEngineer> getAllSoftwareEngineers();
+    List<SoftwareEngineerDto> getAllSoftwareEngineers();
 }
