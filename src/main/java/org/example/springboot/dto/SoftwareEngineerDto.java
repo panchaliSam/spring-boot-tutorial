@@ -50,4 +50,12 @@ public class SoftwareEngineerDto {
                 softwareEngineer.getTechStack()
         );
     }
+
+    public SoftwareEngineer toEntity() {
+        return new SoftwareEngineer(
+                this.id,
+                this.name,
+                this.techStack
+        );
+    }
 }

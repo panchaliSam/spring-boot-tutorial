@@ -1,5 +1,36 @@
-### GET request to example server
-GET http://localhost:8080
-
-### GET request to all software engineers
+### Get all software engineers
 GET http://localhost:8080/api/v1/software-engineers
+
+###
+
+### Get software engineer by ID
+GET http://localhost:8080/api/v1/software-engineers/1
+
+###
+
+### Create new software engineer
+POST http://localhost:8080/api/v1/software-engineers
+Content-Type: application/json
+
+{
+  "name": "Anne",
+  "techStack": "SpringBoot"
+}
+
+###
+
+### Update existing software engineer
+PUT http://localhost:8080/api/v1/software-engineers/1
+Content-Type: application/json
+
+{
+  "name": "Anne Updated",
+  "techStack": "SpringBoot + Hibernate"
+}
+
+###
+
+### Delete software engineer
+DELETE http://localhost:8080/api/v1/software-engineers/1
+
+###
